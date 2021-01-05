@@ -1,0 +1,32 @@
+.vibration {
+    --pz: 0.5rem;
+    position: relative;
+    width: var(--pz);
+    height: var(--pz);
+    margin-right: calc(1.5 * var(--pz));
+    border-radius: 100%;
+    background-color: rgba(180, 8, 233, 1);
+    animation: vibration 1s ease-in-out infinite;
+}
+
+@keyframes vibration {
+    0%,
+    100%,
+    45%,
+    55% {
+        transform: translateX(0rem);
+    }
+    15%,
+    30%,
+    50%,
+    70%,
+    85% {
+        transform: translateX(0.125rem);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(-0.125rem);
+    }
+}

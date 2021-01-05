@@ -1,0 +1,88 @@
+.bg-wave {
+    background-color: #f1f3f6;
+}
+
+.wave-outer {
+    --pz: 10rem;
+    position: absolute;
+    width: var(--pz);
+    height: var(--pz);
+    border-radius: 50%;
+    margin: 300px 0;
+    background-color: #f1f3f6;
+    box-shadow: 4px 4px 12px 0px rgba(55, 84, 170, 0.2),
+        -4px -4px 12px 0px rgba(255, 255, 255, 1),
+        4px 4px 12px 0px rgba(255, 255, 255, 1) inset,
+        -4px -4px 12px 0px rgba(55, 84, 170, 0.15) inset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wave-inner {
+    content: '';
+    display: block;
+    position: relative;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background-color: #f1f3f6;
+    box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 1),
+        -4px -4px 12px 0px rgba(55, 84, 170, 0.2),
+        4px 4px 12px 0px rgba(55, 84, 170, 0.15) inset,
+        -4px -4px 12px 0px rgba(255, 255, 255, 1) inset;
+}
+
+.wave-inner_1,
+.wave-inner_2,
+.wave-inner_3,
+.wave-inner_4 {
+    animation: wave-inner 2s infinite linear;
+}
+.wave-outer_1,
+.wave-outer_2,
+.wave-outer_3,
+.wave-outer_4 {
+    animation: wave-outer 2s infinite linear;
+}
+
+.wave-inner_1,
+.wave-outer_1 {
+    animation-delay: 0.2s;
+}
+.wave-inner_2,
+.wave-outer_2 {
+    animation-delay: 8s;
+}
+.wave-inner_3,
+.wave-outer_3 {
+    animation-delay: 1.2s;
+}
+.wave-inner_4,
+.wave-outer_4 {
+    animation-delay: 2.2s;
+}
+
+@keyframes wave-outer {
+    fron {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(5);
+        box-shadow: 4px 4px 12px 0px rgba(255, 255, 255, 0),
+            -4px -4px 12px 0px rgba(55, 84, 170, 0),
+            4px 4px 12px 0px rgba(55, 84, 170, 0) inset,
+            -4px -4px 12px 0px rgba(255, 255, 255, 0) inset;
+    }
+}
+@keyframes wave-inner {
+    fron {
+    }
+    to {
+        width: 80%;
+        height: 80%;
+        box-shadow: 4px 4px 12px 0px rgba(55, 84, 170, 0),
+            -4px -4px 12px 0px rgba(255, 255, 255, 0),
+            4px 4px 12px 0px rgba(255, 255, 255, 0) inset,
+            -4px -4px 12px 0px rgba(55, 84, 170, 0) inset;
+    }
+}

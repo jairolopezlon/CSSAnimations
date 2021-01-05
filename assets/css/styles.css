@@ -1,0 +1,32 @@
+@import './pulse.css';
+@import './vibration.css';
+@import './wave.css';
+
+*, *: : after, *: : before {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+body {
+    margin: 0;
+}
+
+.container-animation {
+    margin: 2rem auto;
+    padding: 4rem;
+    border-radius: 1rem;
+    width: 80%;
+    background-color: rgb(228, 242, 255);
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-wave {
+    background-color: #f1f3f6;
+    height: 700px;
+    box-shadow: none;
+}
